@@ -1,0 +1,4 @@
+yogaSchool
+==========
+
+Software Engineering project
