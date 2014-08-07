@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+        <title> Registration </title>
+        <h:outputStylesheet library="css" name="signUP.css"  /> 
+</h:head>
+
+<h:body>
+  <div class="signUpPage">
+    
+       <h1> Yoga Studio</h1>
+        <h:form id="userInfo">
+            <h2>Sign Up</h2>
+                        <table >
+                            <tr>
+                                <td class="reqInfo">First Name:</td>
+                                    <td>
+                                    <h:inputText label="First Name"
+                                    id="fname" value="#{userBean.firstName}"
+                                    required="true"/>
+                                    <h:message for="fname" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="reqInfo">Last Name:</td>
+                                    <td>
+                                    <h:inputText label="Last Name"
+                                    id="lname" value="#{userBean.lastName}"
+                                    required="true"/>
+                                    <h:message for="lname" />
+                                    </td>
+                            </tr>
+
+                            <tr>
+                                <td class="reqInfo">Email Address:</td>
+                                    <td>
+                                    <h:inputText label="Email Address"
+                                    id="email" value="#{userBean.email}"
+                                    required="true"
+                                    validator="#{userBean.validateEmail}"/>
+                                    <h:message for="email" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="reqInfo">Address:</td>
+                                <td>
+                                    <h:inputText label="Address"
+                                    id="address" value="#{userBean.address}"
+                                    required="true"/>
+                                    <h:message for="address" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="reqInfo">Phone Number:</td>
+                                <td>
+                                    <h:inputText label="Phone"
+                                    id="phone" value="#{userBean.phoneNumber}"
+                                    required="true"/>
+                                    <h:message for="phoneNumber" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="reqInfo">Username:</td>
+                                <td>
+                                    <h:inputText label="Username"
+                                    id="username" value="#{userBean.username}"
+                                    required="true"/>
+                                    <h:message for="userName" />
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="reqInfo">Password:</td>
+                                <td>
+                                    <h:inputText label="Password"
+                                    id="password" value="#{userBean.password}"
+                                    required="true"/>
+                                    <h:message for="password" />
+                                    </td>
+                            </tr>
+                        </table>
+                    <p><h:messages /></p>
+                    <p id="signUpbutton"><h:commandButton action="#{MessageView.postMessage}" value="Sign Up" /></p>
+            </h:form>
+      </div>
+</h:body>
+
+</html>
+
