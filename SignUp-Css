@@ -1,0 +1,27 @@
+html{
+    background-color: #00CCCC;   
+}
+h1 {
+    text-align: center;
+    background-color: #00FF00;
+    padding-bottom: 50px;
+    padding-top:50px;
+}
+#userInfo{
+  margin: 50px auto;
+  width: 640px;
+  background-color:#E0E0E0;
+}
+#signUpbutton{
+
+    margin-right: 50px;
+    
+}
+#login{
+    z-index: 22;
+}
+.reqInfo {
+    font-size: 25px;
+}
+
+
